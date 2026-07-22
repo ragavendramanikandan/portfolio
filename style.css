@@ -841,11 +841,13 @@ justify-content:center;
 
 @media(max-width:768px){
 
-.nav-links{
+    .nav-links{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
 
-display:none;
-
-}
 
 .hero h1{
 
