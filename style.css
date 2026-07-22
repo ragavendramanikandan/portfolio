@@ -1604,3 +1604,97 @@ body.light-mode textarea:focus{
     border-color:#007AFF !important;
     box-shadow:0 0 15px rgba(0,122,255,.2);
 }
+
+/* ===========================
+   HAMBURGER MENU
+=========================== */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.menu-btn{
+    display:none;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#007AFF;
+    color:#fff;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* Desktop */
+
+@media (min-width:769px){
+
+    .menu-btn{
+        display:none;
+    }
+
+    .nav-links{
+        display:flex !important;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .navbar{
+        flex-wrap:wrap;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+
+        width:100%;
+
+        display:none;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        margin-top:20px;
+
+        gap:20px;
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+        animation:menu .4s ease;
+
+    }
+
+}
+
+@keyframes menu{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
