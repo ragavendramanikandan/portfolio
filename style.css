@@ -1646,7 +1646,11 @@ body.light-mode textarea:focus{
 @media (max-width:768px){
 
     .navbar{
-        flex-wrap:wrap;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 20px;
+        flex-wrap:nowrap;
     }
 
     .menu-btn{
@@ -1654,19 +1658,16 @@ body.light-mode textarea:focus{
     }
 
     .nav-links{
-
-        width:100%;
-
-        display:none;
-
-        flex-direction:column;
-
-        text-align:center;
-
-        margin-top:20px;
-
-        gap:20px;
-
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:rgba(15,15,20,.95);
+    backdrop-filter:blur(20px);
+    padding:20px 0;
+    display:none;
+    flex-direction:column;
+    text-align:center;
     }
 
     .nav-links.active{
